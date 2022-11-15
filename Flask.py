@@ -17,8 +17,7 @@ def Api():
     XApiKey = str(request.form['X-Api-Key'])
     if XApiKey == 'Pass@api':
         response = muterun_js(' '.join([os.path.abspath('browser.js'), "\""+url+"\""]))
-        signature = json.loads(response.stdout)
-        return signature
+        return response
     else:
         return json.dump({"status": "error", "error_type": "incorrect password"})
         
