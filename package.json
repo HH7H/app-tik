@@ -24,5 +24,6 @@
   "homepage": "https://github.com/carcabot/tiktok-signature#readme",
   "dependencies": {
     "playwright-chromium": "^1.10.0"
+    "express": "^1.0"
   }
 }
