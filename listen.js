@@ -1,12 +1,12 @@
 const Signer = require("./index");
-const http = require("http");
+const express = require("express");
 const PORT = process.env.PORT || 8080;
 (async function main() {
   try {
     const signer = new Signer();
     const start = new Date();
 
-    const server = http
+    const server = express()
       .createServer()
       .listen(PORT)
       .on("listening", function () {
